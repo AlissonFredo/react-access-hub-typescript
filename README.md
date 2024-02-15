@@ -1,5 +1,18 @@
 # react-access-hub-typescript
+
 react-access-hub-typescript
+
+## Convertendo o projeto de JS para TypeScript
+
+### `npm install --save typescript @types/node @types/react @types/react-dom @types/jest`
+
+### `npx tsc --init`
+
+## Adicionar esta linha de codigo no arquivo tsconfig.json
+
+### `"jsx": "react-jsx",`
+
+### `npm install --save @types/react-bootstrap -D --force`
 
 # React Access Hub (Front-End)
 

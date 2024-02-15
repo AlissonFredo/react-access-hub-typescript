@@ -2,11 +2,12 @@ import { Col, Container, Form, Row } from "react-bootstrap";
 import Banner from "../../assets/images/out-0.png";
 import { Button } from "../../components/Button";
 import { useNavigate, Link } from "react-router-dom";
-import { Input } from "../../components/Input";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { Input } from "../../components/Input";
 import { api } from "../../services/api";
+import { IFormData } from "./types";
 
 const schema = yup
   .object({
@@ -38,7 +39,7 @@ const Login = () => {
     navigate("/");
   };
 
-  const onSubmit = async (formData) => {
+  const onSubmit = async (formData: IFormData) => {
     try {
       const { data } = await api.get(
         `users?email=${formData.email}&password=${formData.password}`

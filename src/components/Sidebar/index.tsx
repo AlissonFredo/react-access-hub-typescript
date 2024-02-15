@@ -1,6 +1,7 @@
 import { Link, useLocation } from "react-router-dom";
+import { ISidebar } from "./types";
 
-const Sidebar = ({ title, logo, links = [] }) => {
+const Sidebar = ({ title, logo, links = [] }: ISidebar) => {
   const localizacao = useLocation();
 
   return (

@@ -7,6 +7,7 @@ import { Button } from "../../components/Button";
 import * as yup from "yup";
 import Banner from "../../assets/images/out-0.png";
 import { api } from "../../services/api";
+import { IFormData } from "./types";
 
 const schema = yup
   .object({
@@ -21,7 +22,7 @@ const schema = yup
       .required("O campo é obrigatorio"),
     confirm_password: yup
       .string()
-      .oneOf([yup.ref("password"), null], "As senhas devem coincidir")
+      .oneOf([yup.ref("password"), undefined], "As senhas devem coincidir")
       .required("A confirmação de senha é obrigatória"),
   })
   .required();
@@ -43,7 +44,7 @@ const Register = () => {
     navigate("/");
   };
 
-  const onSubmit = async (formData) => {
+  const onSubmit = async (formData: IFormData) => {
     try {
       delete formData.confirm_password;
 

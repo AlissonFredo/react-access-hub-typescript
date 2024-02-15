@@ -1,9 +1,9 @@
-import { Header } from "../../components/Header";
-import { Sidebar } from "../../components/Sidebar";
 import Banner from "../../assets/images/out-0.png";
 import { AiOutlineDashboard } from "react-icons/ai";
 import { AiOutlineUser } from "react-icons/ai";
 import { Alert, Col, Row, Container } from "react-bootstrap";
+import { Header } from "../../components/Header";
+import { Sidebar } from "../../components/Sidebar";
 
 const Dashboard = () => {
   return (

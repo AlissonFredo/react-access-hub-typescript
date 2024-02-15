@@ -1,6 +1,7 @@
 import { Button as ButtonBootstrap } from "react-bootstrap";
+import { IButton } from "./types";
 
-const Button = ({ title, isCuston = false, ...rest }) => {
+const Button = ({ title, isCuston = false, ...rest }: IButton) => {
   return (
     <>
       <style type="text/css">

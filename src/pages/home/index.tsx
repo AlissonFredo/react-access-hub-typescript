@@ -1,7 +1,7 @@
 import { Col, Container, Row } from "react-bootstrap";
 import Banner from "../../assets/images/out-0.png";
-import { Button } from "../../components/Button";
 import { useNavigate } from "react-router-dom";
+import { Button } from "../../components/Button";
 
 const Home = () => {
   const navigate = useNavigate();
